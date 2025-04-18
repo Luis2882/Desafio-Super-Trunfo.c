@@ -2,16 +2,17 @@
 
 int main() {
    
-    float populacao1, populacao2;
-    float km1, pib1; 
-    float km2, pib2;
-    float densidade1 = populacao1 / km1, densidade2 = populacao2 / km2;
+    int populacao1, populacao2;
+    int km1, pib;
+    int km2, pib2;
     char estado1[50];
     char estado2[50];
     char cidade1[50];
     char cidade2[50];
     char turisticos1[50];
     char turisticos2[50];
+    float densidade1 = (float) populacao1 / km1;
+    float densidade2 = (float) populacao2 / km2;
 
     printf("Bem vindo, ao Desafio das Cartas! \n");
 
@@ -22,13 +23,13 @@ int main() {
     scanf("%s", &cidade1);
 
     printf("Hmm, otimo! Agora coloque a população da sua cidade: \n");
-    scanf("%f", &populacao1);    
+    scanf("%d", &populacao1);    
 
     printf("Agora nos diga quantos quilometros tem essa cidade: \n");
-    scanf("%f", &km1);
+    scanf("%d", &km1);
 
     printf("Nossa essa cidade é grande! Agora nos diga o Pib dela: \n");
-    scanf("%f", &pib1);
+    scanf("%d", &pib1);
 
     printf("Uau! Agora nos fale um ponto turistico de lá: \n ");
     scanf("%s", &turisticos1);
@@ -42,13 +43,13 @@ int main() {
     scanf("%s", &cidade2);
 
     printf("Ok! Agora preciso saber a população de lá: \n");
-    scanf("%f", &populacao2);
+    scanf("%d", &populacao2);
 
     printf("Diga agora quantos Km tem: \n");
-    scanf("%f", &km2);
+    scanf("%d", &km2);
 
     printf("Agora o pib: \n");
-    scanf("%f", &pib2);
+    scanf("%d", &pib2);
 
     printf("Hmm, agora nos fale um ponto turistico de lá: \n");
     scanf("%s", &turisticos2);
@@ -56,14 +57,14 @@ int main() {
     printf("Ótimo agora vamos dizer quais são suas cartas! \n");
     
     printf(" Sua Primeira carta é do estado de: %s - E da cidade de: %s \n", estado1, cidade1);
-    printf(" Ela tem a população de: %d - E sua extensão é de: %f \n", populacao1, km1);
-    printf("Seu Pib é de: %f - e seus pontos turisticos são: %s \n", pib1, turisticos1);
-    printf("Sua Densidade Populacional é: %f\n", densidade1);
+    printf(" Ela tem a população de: %d - E sua extensão é de: %d \n", populacao1, km1);
+    printf("Seu Pib é de: %d - e seus pontos turisticos são: %s \n", pib1, turisticos1);
+    printf("Sua Densidade Populacional é: %f", densidade1);
 
     printf("Agora sua segunda carta é do estado de: %s - E da cidade de: %s \n", estado2, cidade2);
-    printf("Sua população é de: %d - E sua extensão é de: %f \n", populacao2, km2);
-    printf("Seu Pib é de: %f - e seus pontos turisticos são: %s \n", pib2, turisticos2);
-    printf("Sua Densidade Populacional é: %f\n", densidade2);
+    printf("Sua população é de: %d - E sua extensão é de: %d \n", populacao2, km2);
+    printf("Seu Pib é de: %d - e seus pontos turisticos são: %s \n", pib2, turisticos2);
+    printf("Sua Densidade Populacional é: %f", densidade2);
     
     printf("Obrigado por jogar!");
 
