@@ -3,7 +3,7 @@
 int main() {
    
     int populacao1, populacao2;
-    int km1, pib;
+    int km1, pib1;
     int km2, pib2;
     char estado1[50];
     char estado2[50];
@@ -11,9 +11,7 @@ int main() {
     char cidade2[50];
     char turisticos1[50];
     char turisticos2[50];
-    float densidade1 = (float) populacao1 / km1;
-    float densidade2 = (float) populacao2 / km2;
-
+   
     printf("Bem vindo, ao Desafio das Cartas! \n");
 
     printf("Coloque abaixo, a sigla do estado que vai representar sua carta: \n" );
@@ -33,6 +31,9 @@ int main() {
 
     printf("Uau! Agora nos fale um ponto turistico de lá: \n ");
     scanf("%s", &turisticos1);
+
+    float densidade1 = (float) populacao1 / km1;
+    float percap1 = (float) pib1 / populacao1;
 
     printf(" Ótimo, agora que já cadastramos sua carta vamos colocar uma segunda carta pro jogo! \n");
     
@@ -54,17 +55,22 @@ int main() {
     printf("Hmm, agora nos fale um ponto turistico de lá: \n");
     scanf("%s", &turisticos2);
 
+    float densidade2 = (float) populacao2 / km2;
+    float percap2 = (float) pib2 / populacao2;
+
     printf("Ótimo agora vamos dizer quais são suas cartas! \n");
     
     printf(" Sua Primeira carta é do estado de: %s - E da cidade de: %s \n", estado1, cidade1);
     printf(" Ela tem a população de: %d - E sua extensão é de: %d \n", populacao1, km1);
     printf("Seu Pib é de: %d - e seus pontos turisticos são: %s \n", pib1, turisticos1);
-    printf("Sua Densidade Populacional é: %f", densidade1);
+    printf("Sua Densidade Populacional é: %f\n", densidade1);
+    prinf("Seu Pib per capita é de: %f\n", percap1);
 
     printf("Agora sua segunda carta é do estado de: %s - E da cidade de: %s \n", estado2, cidade2);
     printf("Sua população é de: %d - E sua extensão é de: %d \n", populacao2, km2);
     printf("Seu Pib é de: %d - e seus pontos turisticos são: %s \n", pib2, turisticos2);
-    printf("Sua Densidade Populacional é: %f", densidade2);
+    printf("Sua Densidade Populacional é: %f\n", densidade2);
+    prinf("Seu Pib per capita é de: %f\n", percap2);
     
     printf("Obrigado por jogar!");
 
